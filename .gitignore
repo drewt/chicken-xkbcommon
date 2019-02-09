@@ -1,0 +1,17 @@
+xkbcommon.import.scm
+xkbcommon.import.so
+xkbcommon.so
+xkbcommon.static.o
+xkbcommon.build.sh
+xkbcommon.install.sh
+xkbcommon.link
+
+xkbcommon.compose.import.scm
+xkbcommon.compose.import.so
+xkbcommon.compose.so
+xkbcommon.compose.static.o
+xkbcommon.compose.build.sh
+xkbcommon.compose.install.sh
+xkbcommon.compose.link
+
+*.swp

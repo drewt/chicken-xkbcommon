@@ -1,0 +1,12 @@
+((author "Drew Thoreson")
+ (synopsis "Bindings to libxkbcommon")
+ (category input/output)
+ (license "MIT")
+ (build-dependencies bind)
+ (foreign-dependencies "libxkbcommon")
+ (components (extension xkbcommon
+               (link-options "-L" "-lxkbcommon"))
+             (extension xkbcommon.compose
+               (link-options "-L" "-lxkbcommon"))
+             ; XXX: chicken-install doesn't actually install this?
+             (scheme-include xkbcommon-keysyms)))
