@@ -99,8 +99,8 @@ struct xkb_rule_names {
     const char *options;
 };
 
-int
-xkb_keysym_get_name(xkb_keysym_t keysym, char *buffer, size_t size);
+//int
+//xkb_keysym_get_name(xkb_keysym_t keysym, char *buffer, size_t size);
 
 xkb_keysym_t
 xkb_keysym_from_name(const char *name, enum xkb_keysym_flags flags);

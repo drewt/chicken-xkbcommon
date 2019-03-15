@@ -286,4 +286,10 @@
   (define (xkb-state-key-get-syms state keycode)
     (let-location ((syms (c-pointer xkb-keysym)))
       (let ((n (%xkb-state-key-get-syms state keycode (location syms))))
-        (syms->list n syms)))))
+        (syms->list n syms))))
+
+  (define xkb-keysym-get-name
+    (foreign-lambda* c-string* ((unsigned-int32 keysym))
+      "char *buffer = malloc(128);"
+      "xkb_keysym_get_name(keysym, buffer, 128);"
+      "C_return(buffer);")))
